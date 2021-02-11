@@ -4,9 +4,9 @@ import numpy as np
 from keras.preprocessing import image
 
 app = Flask(__name__)
-model = tf.keras.models.load_model("TENSORFLOW MODEL PATH")
+model = tf.keras.models.load_model("my_model.h5")
 
-test=image.load_img('IMAGE TO TEST PATH',target_size = (64, 64))
+test=image.load_img('2.jpg',target_size = (64, 64))
 test=image.img_to_array(test)
 test=np.expand_dims(test, axis=0)
 
